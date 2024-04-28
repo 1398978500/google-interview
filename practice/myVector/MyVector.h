@@ -1,5 +1,7 @@
 #pragma once
 
+#include <memory>
+
 namespace lw {
 static const int iMinCapacity = 16;  // 最小容量
 static const int iGrowFactor = 2;    // 增长因子
@@ -25,17 +27,28 @@ public:
 
     int find(int val) const;  // 查找第一个值是val的元素,返回下标
 
+    int& operator[](int iIndex);
+
 private:
     void resize(int iNewCapacity);
 
-private:
     // 计算实际需要的capacity 返回最终的capacity
     int calCapacity(int iCap);
 
+    // 扩大容量
+    void increaseCapacity();
+
+    // 缩小容量
+    void decreaseCapacity();
+
+    // 实际改变capacity
+    void changeCapacty(int iNewCap);
+
 private:
-    int  iCapacity;
-    int* arr;
-    int  iSize;
+    std::unique_ptr<int[]> vData;
+
+    int iCapacity;
+    int iSize;
 };
 
 }  // namespace lw
