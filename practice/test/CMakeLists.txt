@@ -14,5 +14,6 @@ function(gen_exe test_name include_name lib_name)
     )
 endfunction()
 
-gen_exe("MyVector_test" "myVector" "MyVector")
+gen_exe("MyVectorTest" "myVector" "MyVector")
+gen_exe("LinkedListTest" "linkedList" "LinkedList")
 
