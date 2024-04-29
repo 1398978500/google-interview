@@ -2,7 +2,7 @@
 
 namespace lw {
 
-LinkedList::LinkedList(/* args */) {}
+template <class T>
+LinkedList<T>::~LinkedList() {}
 
-LinkedList::~LinkedList() {}
 }  // namespace lw

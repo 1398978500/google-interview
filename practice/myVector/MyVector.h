@@ -10,7 +10,10 @@ static const int iShrinkFactor = 4;  // 收缩因子
 class MyVector {
 public:
     MyVector(int iCap = iMinCapacity);
+    // 拷贝构造函数,但是unique_ptr的拷贝构造函数被删除了,所以无法使用
     MyVector(const MyVector& other) = default;
+    // 移动构造函数,可以使用,但是移动完后,原数组无法使用
+    MyVector(MyVector&& other) = default;
     ~MyVector();
 
     int  getSize() const;

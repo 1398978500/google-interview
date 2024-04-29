@@ -94,5 +94,12 @@ int main(int argc, char const* argv[]) {
         }
     }
 
+    // 移动构造函数后,a数组将被删除
+    MyVector b(std::move(a));
+    showMyVector(b);
+
+    // 错误
+    // showMyVector(a);
+
     return 0;
 }
