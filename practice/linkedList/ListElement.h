@@ -11,7 +11,7 @@ public:
 
     ~ListElement() {}
     ListElement(const ListElement&) = delete;
-    ListElement& operator=(const ListElement&) = default;
+    ListElement<T>& operator=(const ListElement<T>&) = default;
 
     const T& getData() const {
         return data;
@@ -25,7 +25,7 @@ public:
         data = t;
     }
 
-    void setNext(const ListElement<T>* elem) {
+    void setNext(ListElement<T>* elem) {
         next = elem;
     }
 

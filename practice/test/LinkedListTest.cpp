@@ -6,7 +6,8 @@ using namespace lw;
 using namespace std;
 
 int main(int argc, char const* argv[]) {
-    cout << "linked list test" << endl;
+    LinkedList<int> a;
+    a.show();
 
     return 0;
 }
