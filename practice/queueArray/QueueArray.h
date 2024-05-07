@@ -54,8 +54,8 @@ T QueueArray<T>::dequeue() {
         exit(EXIT_FAILURE);
     }
 
-    T ret = data[tail];
-    tail++;
+    T ret = data[head];
+    head++;
     return ret;
 }
 
