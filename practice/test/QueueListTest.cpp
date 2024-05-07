@@ -19,7 +19,7 @@ int main(int argc, char const* argv[]) {
             break;
 
         case 'd':
-            ql.deQueue();
+            cout << ql.deQueue() << endl;
             break;
 
         default:
