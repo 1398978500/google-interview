@@ -292,7 +292,7 @@ void LinkedList<T>::removeValue(const T& value) {
         if(cur->getData() == value) {
             // 删头节点
             if(prev == nullptr) {
-                head = cur->next;
+                head = cur->getNext();
             }
             else {
                 prev->setNext(cur->getNext());
@@ -309,6 +309,11 @@ void LinkedList<T>::removeValue(const T& value) {
 
 template <class T>
 void LinkedList<T>::show() {
+    if(head == nullptr) {
+        cout << "empty" << endl;
+        return;
+    }
+
     auto cur = head;
     while(cur->getNext()) {
         cout << cur->getData() << "->";
