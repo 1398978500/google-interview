@@ -1,2 +1,2 @@
-practice/build/*
+**/build/*
 .vscode/**
