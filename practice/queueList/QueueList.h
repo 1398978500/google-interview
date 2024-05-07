@@ -20,10 +20,10 @@ public:
     QueueList(const QueueList&) = delete;
     QueueList& operator=(const QueueList&) = delete;
 
-    void    enQueue(T value);
-    const T deQueue();
-    bool    bIsEmpty();
-    void    show();
+    void    enqueue(T value);
+    const T dequeue();
+    bool    bIsEmpty() const;
+    void    show() const;
 
 private:
     ListElement<T>* head;
@@ -41,7 +41,7 @@ QueueList<T>::~QueueList() {
 }
 
 template <class T>
-void QueueList<T>::enQueue(T value) {
+void QueueList<T>::enqueue(T value) {
     ListElement<T>* node = new ListElement<T>(value);
     if(tail == nullptr) {
         tail = head = node;
@@ -53,7 +53,7 @@ void QueueList<T>::enQueue(T value) {
 }
 
 template <class T>
-const T QueueList<T>::deQueue() {
+const T QueueList<T>::dequeue() {
     if(head == nullptr) {
         cerr << "queue is empty" << endl;
         exit(EXIT_FAILURE);
@@ -75,12 +75,12 @@ const T QueueList<T>::deQueue() {
 }
 
 template <class T>
-bool QueueList<T>::bIsEmpty() {
+bool QueueList<T>::bIsEmpty() const {
     return head == nullptr;
 }
 
 template <class T>
-void QueueList<T>::show() {
+void QueueList<T>::show() const {
     if(head == nullptr) {
         cout << "empty" << endl;
         return;

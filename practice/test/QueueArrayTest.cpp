@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "QueueList.h"
+#include "QueueArray.h"
 
 using namespace std;
 using namespace lw;
@@ -17,7 +17,7 @@ void help() {
 }
 
 int main(int argc, char const* argv[]) {
-    QueueList<int> ql;
+    QueueArray<int> qa;
 
     char op = 0;
     int  val = 0;
@@ -25,15 +25,15 @@ int main(int argc, char const* argv[]) {
         switch(op) {
         case 'e':
             cin >> val;
-            ql.enqueue(val);
+            qa.enqueue(val);
             break;
 
         case 'd':
-            cout << ql.dequeue() << endl;
+            cout << qa.dequeue() << endl;
             break;
 
         case 's':
-            ql.show();
+            qa.show();
             break;
 
         default:
