@@ -22,7 +22,7 @@ public:
 
     void    enqueue(T value);
     const T dequeue();
-    bool    bIsEmpty() const;
+    bool    isEmpty() const;
     void    show() const;
 
 private:
@@ -75,7 +75,7 @@ const T QueueList<T>::dequeue() {
 }
 
 template <class T>
-bool QueueList<T>::bIsEmpty() const {
+bool QueueList<T>::isEmpty() const {
     return head == nullptr;
 }
 

@@ -25,10 +25,18 @@ int main(int argc, char const* argv[]) {
         switch(op) {
         case 'e':
             cin >> val;
+            if(qa.isFull()) {
+                cout << "full" << endl;
+                break;
+            }
             qa.enqueue(val);
             break;
 
         case 'd':
+            if(qa.isEmpty()) {
+                cout << "empty" << endl;
+                break;
+            }
             cout << qa.dequeue() << endl;
             break;
 

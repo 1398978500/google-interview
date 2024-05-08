@@ -25,8 +25,8 @@ public:
 
     void enqueue(T value);
     T    dequeue();
-    bool IsEmpty() const;
-    bool IsFull() const;
+    bool isEmpty() const;
+    bool isFull() const;
     void show() const;
 
 private:
@@ -49,7 +49,7 @@ void QueueArray<T>::enqueue(T value) {
 
 template <class T>
 T QueueArray<T>::dequeue() {
-    if(IsEmpty()) {
+    if(isEmpty()) {
         cerr << "queue is empty " << endl;
         exit(EXIT_FAILURE);
     }
@@ -60,18 +60,18 @@ T QueueArray<T>::dequeue() {
 }
 
 template <class T>
-bool QueueArray<T>::IsEmpty() const {
+bool QueueArray<T>::isEmpty() const {
     return head == tail;
 }
 
 template <class T>
-bool QueueArray<T>::IsFull() const {
+bool QueueArray<T>::isFull() const {
     return head == (tail + 1) % QUEUE_ARRAY_POSITIONS;
 }
 
 template <class T>
 void QueueArray<T>::show() const {
-    if(IsEmpty()) {
+    if(isEmpty()) {
         cout << "empty" << endl;
         return;
     }
