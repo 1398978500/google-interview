@@ -2,6 +2,7 @@
 
 #include "HashObject.h"
 
+// 使用开放寻址法实现的hashtable
 namespace lw {
 class HashTable {
 public:

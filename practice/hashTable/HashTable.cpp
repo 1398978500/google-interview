@@ -11,6 +11,7 @@ HashTable::HashTable(const int iSize)
     , data(new HashObject[iSize]) {
     if(data == nullptr) {
         cerr << "error :data is nullptr" << endl;
+        exit(EXIT_FAILURE);
     }
 
     for(int i = 0; i < iSize; i++) {
