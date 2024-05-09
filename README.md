@@ -350,6 +350,7 @@
         - [不规则数组（视频）](https://www.lynda.com/Developer-Programming-Foundations-tutorials/Jagged-arrays/149042/177106-4.html)
         - [调整数组的大小（视频）](https://www.lynda.com/Developer-Programming-Foundations-tutorials/Resizable-arrays/149042/177108-4.html)
     - [x] 实现一个动态数组（可自动调整大小的可变数组）：
+        - [代码](practice/myVector/MyVector.h)
         - [ ] 练习使用数组和指针去编码，并且指针是通过计算去跳转而不是使用索引
         - [x] 通过分配内存来新建一个原生数据型数组
             - 可以使用 int 类型的数组，但不能使用其语法特性
@@ -388,6 +389,7 @@
     - [ ] 的确：你需要关于“指向指针的指针”的相关知识：（因为当你传递一个指针到一个函数时，该函数可能会改变指针所指向的地址）该页只是为了让你了解“指向指针的指针”这一概念。但我并不推荐这种链式遍历的风格。因为，这种风格的代码，其可读性和可维护性太低。
         - [指向指针的指针](https://www.eskimo.com/~scs/cclass/int/sx8.html)
     - [x] 实现（我实现了使用尾指针以及没有使用尾指针这两种情况）：
+        - [代码](practice/linkedList/LinkedList.h)
         - [x] size() —— 返回链表中数据元素的个数
         - [x] empty() —— 若链表为空则返回一个布尔值 true
         - [x] value_at(index) —— 返回第 n 个元素的值（从0开始计算）
@@ -417,11 +419,13 @@
     - [ ] [原型队列/先进先出（FIFO）](https://en.wikipedia.org/wiki/Circular_buffer)
     - [ ] [优先级队列（视频）](https://www.lynda.com/Developer-Programming-Foundations-tutorials/Priority-queues-deques/149042/177123-4.html)
     - [x] 使用含有尾部指针的链表来实现:
+        - [代码](practice/queueList/QueueList.h)
         - enqueue(value) —— 在尾部添加值
         - dequeue() —— 删除最早添加的元素并返回其值（首部元素）
         - empty()
     - [x] 使用固定大小的数组实现：
-        - enqueue(value) —— 在可容的情况下添加元素到尾部
+        - [代码](practice/queueArray/QueueArray.h)
+      - enqueue(value) —— 在可容的情况下添加元素到尾部
         - dequeue() —— 删除最早添加的元素并返回其值
         - empty()
         - full()
@@ -452,7 +456,9 @@
             - [Dropbox 中的瞬时上传及存储优化（视频）](https://www.coursera.org/learn/data-structures/lecture/DvaIb/instant-uploads-and-storage-optimization-in-dropbox)
             - [分布式哈希表（视频）](https://www.coursera.org/learn/data-structures/lecture/tvH8H/distributed-hash-tables)
 
-    - [ ] 使用线性探测的数组去实现
+    - [x] 使用线性探测的数组去实现
+        - [开放寻址法代码](practice/hashTable/HashTable.h)
+        - [拉链法代码](practice/hashTableLinked/HashTableLinked.h)
         - hash(k, m) —— m 是哈希表的大小
         - add(key, value) —— 如果 key 已存在则更新值
         - exists(key)
