@@ -4,5 +4,6 @@ project(practice) # 设置工程名
 
 add_subdirectory(myVector)
 add_subdirectory(hashTable)
+add_subdirectory(hashTableLinked)
 add_subdirectory(test)
 
