@@ -472,6 +472,7 @@
     - [ ] [二分查找（视频）](https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search)
     - [ ] [详情](https://www.topcoder.com/community/data-science/data-science-tutorials/binary-search/)
     - [x] 实现：
+        - [代码](practice/test/binarySearchTest.cpp)
         - 二分查找（在一个已排序好的整型数组中查找）
         - 迭代式二分查找
 
