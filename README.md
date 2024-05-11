@@ -484,8 +484,8 @@
         - [ ] 好的介绍：
             [位操作（视频）](https://www.youtube.com/watch?v=7jkIUgLC29I)
         - [ ] [C 语言编程教程 2-10：按位运算（视频）](https://www.youtube.com/watch?v=d0AwjSpNXR0)
-        - [ ] [位操作](https://en.wikipedia.org/wiki/Bit_manipulation)
-        - [ ] [按位运算](https://en.wikipedia.org/wiki/Bitwise_operation)
+        - [x] [位操作](https://en.wikipedia.org/wiki/Bit_manipulation)
+        - [x] [按位运算](https://en.wikipedia.org/wiki/Bitwise_operation)
         - [ ] [Bithacks](https://graphics.stanford.edu/~seander/bithacks.html)
         - [ ] [位元抚弄者（The Bit Twiddler）](http://bits.stephan-brumme.com/)
         - [ ] [交互式位元抚弄者（The Bit Twiddler Interactive）](http://bits.stephan-brumme.com/interactive.html)
@@ -499,9 +499,11 @@
         - [如何在一个 32 位的整型中计算置位（Set Bits）的数量](http://stackoverflow.com/questions/109023/how-to-count-the-number-of-set-bits-in-a-32-bit-integer)
     - [ ] 四舍五入2的幂数：
         - [四舍五入到2的下一幂数](http://bits.stephan-brumme.com/roundUpToNextPowerOfTwo.html)
-    - [ ] 交换值：
+    - [x] 交换值：
+        - [代码](practice/test/absTest.cpp)
         - [交换（Swap）](http://bits.stephan-brumme.com/swap.html)
-    - [ ] 绝对值：
+    - [x] 绝对值：
+        - [代码](practice/test/absTest.cpp)
         - [绝对整型（Absolute Integer）](http://bits.stephan-brumme.com/absInteger.html)
 
 ## 树（Trees）
