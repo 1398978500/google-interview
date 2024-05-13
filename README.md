@@ -549,18 +549,18 @@
         - [ ] [判断一棵二叉树是否为二叉查找树（视频）](https://www.youtube.com/watch?v=yEwSGhSsT0U&index=35&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P)
         - [ ] [从二叉查找树中删除一个节点（视频）](https://www.youtube.com/watch?v=gcULXE7ViZw&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P&index=36)
         - [ ] [二叉查找树中序遍历的后继者（视频）](https://www.youtube.com/watch?v=5cPbNCrdotA&index=37&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P)
-    - [ ] 实现：
-        - [ ] insert    // 往树上插值
-        - [ ] get_node_count // 查找树上的节点数
-        - [ ] print_values // 从小到大打印树中节点的值
-        - [ ] delete_tree
-        - [ ] is_in_tree // 如果值存在于树中则返回 true
-        - [ ] get_height // 返回节点所在的高度（如果只有一个节点，那么高度则为1）
-        - [ ] get_min   // 返回树上的最小值
-        - [ ] get_max   // 返回树上的最大值
-        - [ ] is_binary_search_tree
-        - [ ] delete_value
-        - [ ] get_successor // 返回给定值的后继者，若没有则返回-1
+    - [x] 实现：
+        - [x] insert    // 往树上插值
+        - [x] get_node_count // 查找树上的节点数
+        - [x] print_values // 从小到大打印树中节点的值
+        - [x] delete_tree
+        - [x] is_in_tree // 如果值存在于树中则返回 true
+        - [x] get_height // 返回节点所在的高度（如果只有一个节点，那么高度则为1）
+        - [x] get_min   // 返回树上的最小值
+        - [x] get_max   // 返回树上的最大值
+        - [x] is_binary_search_tree
+        - [x] delete_value
+        - [x] get_successor // 返回给定值的后继者，若没有则返回-1
 
 - ### 堆（Heap） / 优先级队列（Priority Queue） / 二叉堆（Binary Heap）
     - 可视化是一棵树，但通常是以线性的形式存储（数组、链表）
