@@ -25,11 +25,21 @@ function(gen_exe test_name include_name lib_name)
     endif()
 endfunction()
 
+# 动态数组
 gen_exe("MyVectorTest" "myVector" "MyVector")
+# 链表
 gen_exe("LinkedListTest" "linkedList" "")
+# 链表实现队列
 gen_exe("QueueListTest" "queueList" "")
+# 数组实现队列
 gen_exe("QueueArrayTest" "queueArray" "")
+# hash table 开放寻址法
 gen_exe("HashTableTest" "hashTable" "HashTable")
+# hash table 拉链法
 gen_exe("HashTableLinkedTest" "hashTableLinked" "HashTableLinked")
+# 二分法
 gen_exe("binarySearchTest" "" "")
+# 位操作
 gen_exe("absTest" "" "")
+# BST
+gen_exe("BSTSimpleTest" "BSTSimple" "")
