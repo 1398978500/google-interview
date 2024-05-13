@@ -550,6 +550,7 @@
         - [ ] [从二叉查找树中删除一个节点（视频）](https://www.youtube.com/watch?v=gcULXE7ViZw&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P&index=36)
         - [ ] [二叉查找树中序遍历的后继者（视频）](https://www.youtube.com/watch?v=5cPbNCrdotA&index=37&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P)
     - [x] 实现：
+        - [简单BST实现代码](practice/BSTSimple/BSTSimple.h)
         - [x] insert    // 往树上插值
         - [x] get_node_count // 查找树上的节点数
         - [x] print_values // 从小到大打印树中节点的值
