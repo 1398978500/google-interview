@@ -49,7 +49,7 @@ gen_exe("HashTableTest" "hashTable" "HashTable" 0)
 # hash table 拉链法
 gen_exe("HashTableLinkedTest" "hashTableLinked" "HashTableLinked" 0)
 # 二分法
-gen_exe("binarySearchTest" "" "" 0)
+gen_exe("binarySearchTest" "" "" 1)
 # 位操作
 gen_exe("absTest" "" "" 1)
 # BST
