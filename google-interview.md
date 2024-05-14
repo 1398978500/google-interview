@@ -579,17 +579,18 @@
     - [ ] [MIT：堆与堆排序（视频）](https://www.youtube.com/watch?v=B7hVxCmfPtM&index=4&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb)
     - [ ] [CS 61B Lecture 24：优先级队列（视频）](https://www.youtube.com/watch?v=yIUFT6AKBGE&index=24&list=PL4BBB74C7D2A1049C)
     - [ ] [构建线性时间复杂度的堆（大顶堆）](https://www.youtube.com/watch?v=MiyLo8adrWw)
-    - [ ] 实现一个大顶堆：
-        - [ ] insert
-        - [ ] sift_up —— 用于插入元素
-        - [ ] get_max —— 返回最大值但不移除元素
-        - [ ] get_size() —— 返回存储的元素数量
-        - [ ] is_empty() —— 若堆为空则返回 true
-        - [ ] extract_max —— 返回最大值并移除
-        - [ ] sift_down —— 用于获取最大值元素
-        - [ ] remove(i) —— 删除指定索引的元素
-        - [ ] heapify —— 构建堆，用于堆排序
-        - [ ] heap_sort() —— 拿到一个未排序的数组，然后使用大顶堆进行就地排序
+    - [x] 实现一个大顶堆：
+        - [大根堆代码](practice/heap/Heap.h)
+        - [x] insert
+        - [x] sift_up —— 用于插入元素
+        - [x] get_max —— 返回最大值但不移除元素
+        - [x] get_size() —— 返回存储的元素数量
+        - [x] is_empty() —— 若堆为空则返回 true
+        - [x] extract_max —— 返回最大值并移除
+        - [x] sift_down —— 用于获取最大值元素
+        - [x] remove(i) —— 删除指定索引的元素
+        - [x] heapify —— 构建堆，用于堆排序
+        - [x] heap_sort() —— 拿到一个未排序的数组，然后使用大顶堆进行就地排序
             - 注意：若用小顶堆可节省操作，但导致空间复杂度加倍。（无法做到就地）
 
 - ### 字典树（Tries）
