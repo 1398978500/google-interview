@@ -54,3 +54,5 @@ gen_exe("binarySearchTest" "" "" 1)
 gen_exe("absTest" "" "" 1)
 # BST
 gen_exe("BSTSimpleTest" "BSTSimple" "" 0)
+# heap
+gen_exe("HeapSimpleTest" "heap" "" 1)
