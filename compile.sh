@@ -3,4 +3,8 @@
 [ -d "build" ] || mkdir build
 cd build && cmake ../practice && make
 
+if [[ $1 == "test" ]]
+then
+    make test
+fi
 
