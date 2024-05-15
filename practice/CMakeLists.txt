@@ -7,5 +7,6 @@ enable_testing() # 开启测试，否则无法执行make test
 add_subdirectory(myVector)
 add_subdirectory(hashTable)
 add_subdirectory(hashTableLinked)
+add_subdirectory(sorting)
 add_subdirectory(test)
 

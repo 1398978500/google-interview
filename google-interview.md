@@ -613,7 +613,7 @@
         - 伸展树：插入、查找、删除函数的实现，而如果你最终实现了红黑树，那么请尝试一下：
         - 跳过删除函数，直接实现搜索和插入功能
     - 我希望能阅读到更多关于 B 树的资料，因为它也被广泛地应用到大型的数据库当中。
-    - [ ] [自平衡二叉查找树](https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree)
+    - [x] [自平衡二叉查找树](https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree)
 
     - [ ] **AVL 树**
         - 实际中：我能告诉你的是，该种树并无太多的用途，但我能看到有用的地方在哪里：AVL 树是另一种平衡查找树结构。其可支持时间复杂度为 O(log n) 的查询、插入及删除。它比红黑树严格意义上更为平衡，从而导致插入和删除更慢，但遍历却更快。正因如此，才彰显其结构的魅力。只需要构建一次，就可以在不重新构造的情况下读取，适合于实现诸如语言字典（或程序字典，如一个汇编程序或解释程序的操作码）。
@@ -621,6 +621,9 @@
         - [ ] [AVL 树（视频）](https://www.coursera.org/learn/data-structures/lecture/Qq5E0/avl-trees)
         - [ ] [AVL 树的实现（视频）](https://www.coursera.org/learn/data-structures/lecture/PKEBC/avl-tree-implementation)
         - [ ] [分离与合并](https://www.coursera.org/learn/data-structures/lecture/22BgE/split-and-merge)
+        * AVL树特点
+            1. 左右子树都是AVL树
+            2. 每颗子树的高度差(平衡因子)不超过1或不小于-1
 
     - [ ] **伸展树**
         - 实际中：伸展树一般用于缓存、内存分配者、路由器、垃圾回收者、数据压缩、ropes（字符串的一种替代品，用于存储长串的文本字符）、Windows NT（虚拟内存、网络及文件系统）等的实现。
@@ -677,7 +680,7 @@
         - [排序算法的稳定性](http://stackoverflow.com/questions/1517793/stability-in-sorting-algorithms)
         - [排序算法的稳定性](http://www.geeksforgeeks.org/stability-in-sorting-algorithms/)
         - [排序算法 - 稳定性](http://homepages.math.uic.edu/~leon/cs-mcs401-s08/handouts/stability.pdf)
-    - [ ] 哪种排序算法可以用链表？哪种用数组？哪种两者都可？
+    - [x] 哪种排序算法可以用链表？哪种用数组？哪种两者都可？
         - 并不推荐对一个链表排序，但归并排序是可行的.
         - [链表的归并排序](http://www.geeksforgeeks.org/merge-sort-for-linked-list/)
 

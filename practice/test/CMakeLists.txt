@@ -56,3 +56,6 @@ gen_exe("absTest" "" "" 1)
 gen_exe("BSTSimpleTest" "BSTSimple" "" 0)
 # heap
 gen_exe("HeapSimpleTest" "heap" "" 1)
+
+# sort
+gen_exe("SortTest" "sorting" "Sort" 0)
