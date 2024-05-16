@@ -58,4 +58,4 @@ gen_exe("BSTSimpleTest" "BSTSimple" "" 0)
 gen_exe("HeapSimpleTest" "heap" "" 1)
 
 # sort
-gen_exe("SortTest" "sorting" "Sort" 0)
+gen_exe("SortTest" "sorting" "Sort" 1)

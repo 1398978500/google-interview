@@ -7,7 +7,43 @@ using namespace std;
 namespace lw {
 
 // 归并排序
-void mergeSort(vector<int>& v, int l, int r) {}
+void mergeSort(vector<int>& v, int l, int r) {
+    if(l >= r) {
+        return;
+    }
+
+    int iMid = l + (r - l >> 1);
+    mergeSort(v, l, iMid);
+    mergeSort(v, iMid + 1, r);
+
+    // 将l-r这一段排好序放在vTmp
+    vector<int> vTmp(r - l + 1);
+
+    int i = l, j = iMid + 1;
+    int iIndex = 0;
+
+    while(i <= iMid && j <= r) {
+        if(v[i] <= v[j]) {
+            vTmp[iIndex++] = v[i++];
+        }
+        else {
+            vTmp[iIndex++] = v[j++];
+        }
+    }
+
+    while(i <= iMid) {
+        vTmp[iIndex++] = v[i++];
+    }
+
+    while(j <= r) {
+        vTmp[iIndex++] = v[j++];
+    }
+
+    // 将vTmp写回v数组
+    for(i = l, j = 0; i <= r; i++, j++) {
+        v[i] = vTmp[j];
+    }
+}
 
 // 快速排序
 void quickSort(vector<int>& v, int l, int r) {
@@ -30,6 +66,8 @@ void quickSort(vector<int>& v, int l, int r) {
         }
     }
 
+    // 此时i是较大区间第一个数的下标,j是较小区间最后一个数的下标
+    // 最后数组被分为两个区间 [l, j], [j + 1, r]
     quickSort(v, l, j);
     quickSort(v, j + 1, r);
 }
