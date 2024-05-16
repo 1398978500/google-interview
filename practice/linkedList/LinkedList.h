@@ -36,10 +36,16 @@ public:
     // 删除第一个值是value的节点
     void removeValue(const T& value);
 
+    // 归并排序排链表
+    void mergeSort(ListElement<T>** head);
+
     void show();
 
 private:
     ListElement<T>* head;
+
+    // 归并排序,有序合并链表
+    ListElement<T>* sortMerge(ListElement<T>* first, ListElement<T>* second);
 };
 
 //  注:模板类的声明和实现最好在同一文件中
@@ -326,6 +332,60 @@ void LinkedList<T>::show() {
     }
 
     cout << endl;
+}
+
+// 归并排序排链表
+template <class T>
+void LinkedList<T>::mergeSort(ListElement<T>** headRef) {
+    auto head1 = *headRef;
+    if(!head1 || !head1->next) {
+        return;
+    }
+
+    // 找到中间节点的上一个节点
+    ListElement<T>* slow = *head1;
+    ListElement<T>* fast = (*head1)->next;
+    while(fast) {
+        fast = fast->next;
+        if(fast) {
+            fast = fast->next;
+            slow = slow->next;
+        }
+    }
+
+    // 分成两个链表
+    auto firstHead = head1;
+    auto secondHead = slow->next;
+    slow->next = nullptr;
+
+    mergeSort(&firstHead);
+    mergeSort(&secondHead);
+
+    *headRef = sortMerge(firstHead, secondHead);
+}
+
+// 归并排序,有序合并链表
+template <class T>
+ListElement<T>* LinkedList<T>::sortMerge(ListElement<T>* first, ListElement<T>* second) {
+    if(first == nullptr) {
+        return second;
+    }
+
+    if(second == nullptr) {
+        return first;
+    }
+
+    ListElement<T>* node = nullptr;
+    if(first->data <= second->data) {
+        node = first;
+        node->next = sortMerge(first->next, second);
+    }
+    else {
+        node = second;
+        node->next = sortMerge(first, second->next);
+    }
+
+    return node;
 }
 
 }  // namespace lw

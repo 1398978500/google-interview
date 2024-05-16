@@ -716,14 +716,15 @@
 
 - [ ] - 归并排序:
     - [ ] [使用外部数组](http://www.cs.yale.edu/homes/aspnes/classes/223/examples/sorting/mergesort.c)
-    - [ ] [对原数组直接排序](https://github.com/jwasham/practice-cpp/blob/master/merge_sort/merge_sort.cc)
+    - [x] [对原数组直接排序](https://github.com/jwasham/practice-cpp/blob/master/merge_sort/merge_sort.cc)
 - [ ] - 快速排序:
     - [ ] [实现](http://www.cs.yale.edu/homes/aspnes/classes/223/examples/randomization/quick.c)
-    - [ ] [实现](https://github.com/jwasham/practice-c/blob/master/quick_sort/quick_sort.c)
+    - [x] [实现](https://github.com/jwasham/practice-c/blob/master/quick_sort/quick_sort.c)
 
-- [ ] 实现:
-    - [ ] 归并：平均和最差情况的时间复杂度为 O(n log n)。
-    - [ ] 快排：平均时间复杂度为 O(n log n)。
+- [x] 实现:
+    - [排序代码](pracice/sorting/Sort.cpp)
+    - [x] 归并：平均和最差情况的时间复杂度为 O(n log n)。
+    - [x] 快排：平均时间复杂度为 O(n log n)。
     - 选择排序和插入排序的最坏、平均时间复杂度都是 O(n^2)。
     - 关于堆排序，请查看前文堆的数据结构部分。
 
