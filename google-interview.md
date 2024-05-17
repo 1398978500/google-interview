@@ -324,7 +324,7 @@
 - [ ] Skiena 算法：
     - [视频](https://www.youtube.com/watch?v=gSyDMtdPNpU&index=2&list=PLOtl7M3yp-DV69F32zdK7YJcNXpTunF2b)
     - [幻灯片](http://www3.cs.stonybrook.edu/~algorith/video-lectures/2007/lecture2.pdf)
-- [ ] [对于算法复杂度分析的一次详细介绍](http://discrete.gr/complexity/)
+- [x] [对于算法复杂度分析的一次详细介绍](http://discrete.gr/complexity/)
 - [ ] [增长阶数（Orders of Growth）（视频）](https://class.coursera.org/algorithmicthink1-004/lecture/59)
 - [ ] [渐进性（Asymptotics）（视频）](https://class.coursera.org/algorithmicthink1-004/lecture/61)
 - [ ] [UC Berkeley Big O（视频）](https://youtu.be/VIS4YDpuP98)
