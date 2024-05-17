@@ -7,6 +7,8 @@ using std::cerr;
 using std::cout;
 using std::endl;
 
+#define RECURSION
+
 namespace lw {
 
 template <class T>
@@ -37,15 +39,18 @@ public:
     void removeValue(const T& value);
 
     // 归并排序排链表
-    void mergeSort(ListElement<T>** head);
+    void mergeSort() {
+        mergeSort(&head);
+    }
+
+    static void mergeSort(ListElement<T>** head);
+    // 归并排序,有序合并链表
+    static ListElement<T>* sortMerge(ListElement<T>* first, ListElement<T>* second);
 
     void show();
 
 private:
     ListElement<T>* head;
-
-    // 归并排序,有序合并链表
-    ListElement<T>* sortMerge(ListElement<T>* first, ListElement<T>* second);
 };
 
 //  注:模板类的声明和实现最好在同一文件中
@@ -337,26 +342,26 @@ void LinkedList<T>::show() {
 // 归并排序排链表
 template <class T>
 void LinkedList<T>::mergeSort(ListElement<T>** headRef) {
-    auto head1 = *headRef;
-    if(!head1 || !head1->next) {
+    ListElement<T>* head1 = *headRef;
+    if(!head1 || !head1->getNext()) {
         return;
     }
 
     // 找到中间节点的上一个节点
-    ListElement<T>* slow = *head1;
-    ListElement<T>* fast = (*head1)->next;
+    ListElement<T>* slow = head1;
+    ListElement<T>* fast = head1->getNext();
     while(fast) {
-        fast = fast->next;
+        fast = fast->getNext();
         if(fast) {
-            fast = fast->next;
-            slow = slow->next;
+            fast = fast->getNext();
+            slow = slow->getNext();
         }
     }
 
     // 分成两个链表
     auto firstHead = head1;
-    auto secondHead = slow->next;
-    slow->next = nullptr;
+    auto secondHead = slow->getNext();
+    slow->setNext(nullptr);
 
     mergeSort(&firstHead);
     mergeSort(&secondHead);
@@ -375,17 +380,50 @@ ListElement<T>* LinkedList<T>::sortMerge(ListElement<T>* first, ListElement<T>* 
         return first;
     }
 
-    ListElement<T>* node = nullptr;
-    if(first->data <= second->data) {
+#ifdef RECURSION
+    // 递归
+    ListElement<T>* node;
+
+    if(first->getData() <= second->getData()) {
         node = first;
-        node->next = sortMerge(first->next, second);
+        node->setNext(sortMerge(first->getNext(), second));
     }
     else {
         node = second;
-        node->next = sortMerge(first, second->next);
+        node->setNext(sortMerge(first, second->getNext()));
+    }
+    return node;
+
+#else
+    T    t;
+    auto node = new ListElement<T>(t);
+    auto tmpNode = node;
+
+    while(first && second) {
+        if(first->getData() <= second->getData()) {
+            tmpNode->setNext(first);
+            tmpNode = first;
+            first = first->getNext();
+        }
+        else {
+            tmpNode->setNext(second);
+            tmpNode = second;
+            second = second->getNext();
+        }
     }
 
-    return node;
+    if(first) {
+        tmpNode->setNext(first);
+    }
+
+    if(second) {
+        tmpNode->setNext(second);
+    }
+
+    tmpNode = node->getNext();
+    delete node;
+    return tmpNode;
+#endif
 }
 
 }  // namespace lw

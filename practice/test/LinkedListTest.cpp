@@ -21,6 +21,7 @@ void help() {
         r           (reverse)       \n\
         rv val      (removeValue)   \n\
         s           (show)          \n\
+        sort        (mergeSort)     \n\
         " << endl;
 }
 
@@ -78,6 +79,9 @@ int main(int argc, char const* argv[]) {
         }
         else if(op == "s") {
             a.show();
+        }
+        else if(op == "sort") {
+            a.mergeSort();
         }
         else {
             help();
