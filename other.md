@@ -34,3 +34,83 @@ int main(int argc, char* argv[]) {
 }
 
 ```
+
+```
+#include <iostream>
+
+using namespace std;
+
+// 类完美转发的一种用法
+class Base {
+public:
+    Base() = default;
+
+    virtual ~Base() = default;
+
+    virtual void run() = 0;
+
+};
+
+template<typename F>
+class Derived : public Base {
+public:
+    Derived(F&& f) : _f(forward<F>(f)) {}
+
+    virtual ~Derived() = default;
+
+    virtual void run() {
+        _f();
+    }
+
+private:
+    typename remove_reference<F>::type _f;
+};
+
+template<typename F>
+class Derivedp : public Base {
+public:
+    Derivedp(F* f) : _f(f) {}
+
+    virtual ~Derivedp() = default;
+
+    virtual void run() {
+        (*_f)();
+    }
+
+private:
+    typename remove_reference<F>::type* _f;
+};
+
+// 调用run
+template<typename F>
+void run(F&& f) {
+    cout << "F&& f  " << endl;
+    Base* base = new Derived<F>(forward<F>(f));
+    base->run();
+}
+
+template<typename F>
+void run(F* f) {
+    cout << "F* f " << endl;
+    Base* base = new Derivedp<F>(f);
+    base->run();
+}
+
+void f0() {
+    cout << "f0 " << endl;
+}
+
+int main(int argc, char* argv[]) {
+    // 调用 run(F* f)
+    run(f0);
+
+    // 调用 run(F&& f)
+    run([]() {
+        cout << "[]() {}" << endl;
+            });
+
+    return 0;
+}
+```
+
+
