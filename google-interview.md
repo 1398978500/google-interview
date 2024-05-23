@@ -937,7 +937,7 @@
     - [ ] [数据库范式 - 1NF, 2NF, 3NF and 4NF (video)](https://www.youtube.com/watch?v=UrYLYV7WSHM)
     - [ ] [系统设计面试](https://github.com/checkcheckzz/system-design-interview) - 这一部分有很多的资源，浏览一下我放在下面的文章和例子。
     - [ ] [如何在系统设计面试中脱颖而出](http://www.palantir.com/2011/10/how-to-rock-a-systems-design-interview/)
-    - [ ] [每个人都该知道的一些数字](http://everythingisdata.wordpress.com/2009/10/17/numbers-everyone-should-know/)
+    - [x] [每个人都该知道的一些数字](http://everythingisdata.wordpress.com/2009/10/17/numbers-everyone-should-know/)
     - [ ] [上下文切换操作会耗费多少时间?](http://blog.tsunanet.net/2010/11/how-long-does-it-take-to-make-context.html)
     - [ ] [跨数据中心的事务 (video)](https://www.youtube.com/watch?v=srOgpXECblk)
     - [ ] [简明 CAP 理论介绍](http://ksat.me/a-plain-english-introduction-to-cap-theorem/)

@@ -41,6 +41,7 @@ int main(int argc, char* argv[]) {
 using namespace std;
 
 // 类完美转发的一种用法
+
 class Base {
 public:
     Base() = default;
