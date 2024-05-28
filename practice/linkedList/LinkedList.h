@@ -339,7 +339,7 @@ void LinkedList<T>::show() {
     cout << endl;
 }
 
-// 归并排序排链表
+// 链表归并排序
 template <class T>
 void LinkedList<T>::mergeSort(ListElement<T>** headRef) {
     ListElement<T>* head1 = *headRef;
@@ -369,7 +369,7 @@ void LinkedList<T>::mergeSort(ListElement<T>** headRef) {
     *headRef = sortMerge(firstHead, secondHead);
 }
 
-// 归并排序,有序合并链表
+// 归并排序,有序链表合并
 template <class T>
 ListElement<T>* LinkedList<T>::sortMerge(ListElement<T>* first, ListElement<T>* second) {
     if(first == nullptr) {

@@ -12,6 +12,12 @@ mkdir build && cd build && cmake ../practice
 # 编译并执行 gtest需要测试的内容
 ./compile.sh test
 
+# 清理make缓存 即make clean
+./compile.sh clean
+
+# 清理cmake以及make缓存
+./compile.sh cleanall
+
 ```
 
 ## 准备
@@ -28,6 +34,6 @@ sudo apt install libgtest-dev
 ```
 
 ## 常见问题
-1. 使用./compile.sh test 没有日志
+1. 问题: 使用./compile.sh test 没有日志      
    解决: 日志在目录build/Testing/Temporary下查找
 
